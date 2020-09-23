@@ -1,35 +1,15 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
- "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-<title>地図を表示する - YOLP JavaScriptマップAPI サンプルコード</title>
-<script src="https://map.yahooapis.jp/js/V1/jsapi?appid=OY1oDxsr" type="text/javascript"  charset="UTF-8" ></script>
-</head>
 <body>
-  <div id="map" style="width:600px; height:480px;"></div>
+    <div id="map" style="width:400px; height:300px"></div>
 
-<!-- Begin Yahoo! JAPAN Web Services Attribution Snippet -->
-<a href="https://developer.yahoo.co.jp/about">
-<img src="https://s.yimg.jp/images/yjdn/yjdn_attbtn2_105_17.gif" width="105" height="17" title="Webサービス by Yahoo! JAPAN" alt="Webサービス by Yahoo! JAPAN" border="0" style="margin:15px 15px 15px 15px"></a>
-<!-- End Yahoo! JAPAN Web Services Attribution Snippet -->
+    <script type="text/javascript" charset="utf-8" src="https://map.yahooapis.jp/js/V1/jsapi?appid=dj00aiZpPUZYR0laT09WaGdSTSZzPWNvbnN1bWVyc2VjcmV0Jng9MzU-"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            var ymap = new Y.Map("map");
+            ymap.drawMap(new Y.LatLng(35.66572, 139.73100), 17, Y.LayerSetId.NORMAL);
+        }
 
-
-<script >
-<!--
-window.onload = function() {
-    //地図を初期化
-    var map = new Y.Map("map");
-
-    //コントロールの追加
-    map.addControl(new Y.LayerSetControl());
-    map.addControl(new Y.ZoomControl());
-
-    //地図を表示
-    map.drawMap(new Y.LatLng(35.680840,139.767009), 16 ,Y.LayerSetId.NORMAL);
-}
-//-->
-</script>
+    </script>
 </body>
 </html>
